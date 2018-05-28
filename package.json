@@ -20,7 +20,7 @@
     "test": "npm run build && nyc ava --verbose build/test",
     "test:pure": "nyc ava --verbose build/test",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "hooks:postinstall": "ln -sf $PWD/.pre-commit.sh $PWD/.git/hooks/pre-commit",
+    "hooks:postinstall": "if [ -d $PWD/.git/hooks ]; then ln -sf $PWD/.pre-commit.sh $PWD/.git/hooks/pre-commit; fi",
     "postinstall": "npm run hooks:postinstall"
   },
   "contributors": [
