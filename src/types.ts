@@ -61,6 +61,7 @@ export interface SAMLDocumentTemplate {
 }
 export interface ServiceProviderSettings {
   metadata?: string | Buffer;
+  requestSignatureAlgorithm?: string;
   authnRequestsSigned?: boolean;
   wantAssertionsSigned?: boolean;
   wantMessageSigned?: boolean;
