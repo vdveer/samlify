@@ -61,6 +61,7 @@ export interface SAMLDocumentTemplate {
 }
 export interface ServiceProviderSettings {
   metadata?: string | Buffer;
+  requestSignatureAlgorithm?: string;
   authnRequestsSigned?: boolean;
   wantAssertionsSigned?: boolean;
   wantMessageSigned?: boolean;
@@ -81,7 +82,7 @@ export interface IdentityProviderSettings {
   metadata?: string | Buffer;
 
   /** signature algorithm */
-  requestSignatureAlgotithm?: string;
+  requestSignatureAlgorithm?: string;
 
   /** template of login response */
   loginResponseTemplate?: { [key: string]: any };
